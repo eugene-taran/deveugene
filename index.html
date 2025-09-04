@@ -15,9 +15,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
         flex-direction: column;
         text-align: center;
+        padding-top: 80px;
       }
 
       img.profile {
@@ -153,6 +154,85 @@
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 80px 20px 20px;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          padding: 0 20px;
+        }
+
+        .links {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .featured-project {
+          margin: 20px 20px;
+          padding: 20px;
+          max-width: calc(100% - 40px);
+        }
+
+        .featured-project h2 {
+          font-size: 1.2rem;
+        }
+
+        .featured-project p {
+          font-size: 0.85rem;
+        }
+
+        nav {
+          overflow-x: auto;
+          padding: 0 16px;
+        }
+
+        nav a {
+          font-size: 1rem !important;
+          margin-left: 20px !important;
+          white-space: nowrap;
+        }
+
+        nav a:first-child {
+          margin-left: 0 !important;
+        }
+
+        img.profile {
+          width: 180px;
+          height: 180px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav {
+          justify-content: flex-start;
+        }
+
+        nav a {
+          font-size: 0.9rem !important;
+          margin-left: 16px !important;
+        }
+
+        .featured-project {
+          margin: 20px 10px;
+          padding: 16px;
+        }
+
+        .featured-label {
+          font-size: 0.65rem;
+        }
+
+        .featured-link {
+          padding: 8px 20px;
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -167,7 +247,7 @@
         <a href="https://sdsa.team" target="_blank" rel="noopener" style="color: #61dafb; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-left: 32px;">
           SDSA
         </a>
-      </nav>t
+      </nav>
     </header>
     <img
       class="profile"
