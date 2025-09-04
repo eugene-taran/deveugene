@@ -73,6 +73,86 @@
       .cv-button:hover {
         background-color: #dddddd;
       }
+
+      .featured-project {
+        margin: 30px auto;
+        padding: 24px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        max-width: 500px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .featured-project::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #00f2fe);
+        border-radius: 16px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+        animation: gradient-rotate 3s linear infinite;
+      }
+
+      @keyframes gradient-rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .featured-project:hover::before {
+        opacity: 0.7;
+      }
+
+      .featured-label {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+      }
+
+      .featured-project h2 {
+        margin: 8px 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .featured-project p {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 8px auto 16px;
+        font-size: 0.95rem;
+        max-width: 90%;
+      }
+
+      .featured-link {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 24px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 24px;
+        font-weight: bold;
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+      }
+
+      .featured-link:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
     </style>
   </head>
   <body>
@@ -84,7 +164,10 @@
         <a href="https://ai.deveugene.de" target="_blank" rel="noopener" style="color: #61dafb; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-left: 32px;">
           AI Tools Navigator
         </a>
-      </nav>
+        <a href="https://sdsa.team" target="_blank" rel="noopener" style="color: #61dafb; text-decoration: none; font-size: 1.2rem; font-weight: bold; margin-left: 32px;">
+          SDSA
+        </a>
+      </nav>t
     </header>
     <img
       class="profile"
@@ -98,6 +181,15 @@
       <a href="https://linkedin.com/in/eugene-taran" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/eugene-taran" target="_blank" rel="noopener">GitHub</a>
       <a href="https://medium.deveugene.de" target="_blank" rel="noopener">Medium</a>
+    </div>
+
+    <div class="featured-project">
+      <span class="featured-label">🚀 Featured Project</span>
+      <h2>SDSA - Software Development Smart Assist</h2>
+      <p>An AI-powered learning platform for tech professionals with on-device AI, interactive knowledge blocks, and privacy-preserving contextual assistance.</p>
+      <a href="https://sdsa.team/" target="_blank" rel="noopener" class="featured-link">
+        Explore SDSA →
+      </a>
     </div>
 
     <a class="cv-button" href="/eugene-taran-principal-swe.pdf" target="_blank">View CV</a>
