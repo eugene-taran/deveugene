@@ -75,86 +75,6 @@
         background-color: #dddddd;
       }
 
-      .featured-project {
-        margin: 30px auto;
-        padding: 24px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        max-width: 500px;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-      }
-
-      .featured-project::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(45deg, #f093fb, #f5576c, #4facfe, #00f2fe);
-        border-radius: 16px;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 0.3s;
-        animation: gradient-rotate 3s linear infinite;
-      }
-
-      @keyframes gradient-rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-      .featured-project:hover::before {
-        opacity: 0.7;
-      }
-
-      .featured-label {
-        display: inline-block;
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 12px;
-      }
-
-      .featured-project h2 {
-        margin: 8px 0;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-
-      .featured-project p {
-        color: rgba(255, 255, 255, 0.9);
-        margin: 8px auto 16px;
-        font-size: 0.95rem;
-        max-width: 90%;
-      }
-
-      .featured-link {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 10px 24px;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 24px;
-        font-weight: bold;
-        transition: all 0.3s;
-        backdrop-filter: blur(10px);
-      }
-
-      .featured-link:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
       @media (max-width: 768px) {
         body {
           padding: 80px 20px 20px;
@@ -172,20 +92,6 @@
         .links {
           flex-direction: column;
           gap: 12px;
-        }
-
-        .featured-project {
-          margin: 20px 20px;
-          padding: 20px;
-          max-width: calc(100% - 40px);
-        }
-
-        .featured-project h2 {
-          font-size: 1.2rem;
-        }
-
-        .featured-project p {
-          font-size: 0.85rem;
         }
 
         nav {
@@ -217,20 +123,6 @@
         nav a {
           font-size: 0.9rem !important;
           margin-left: 16px !important;
-        }
-
-        .featured-project {
-          margin: 20px 10px;
-          padding: 16px;
-        }
-
-        .featured-label {
-          font-size: 0.65rem;
-        }
-
-        .featured-link {
-          padding: 8px 20px;
-          font-size: 0.9rem;
         }
       }
     </style>
