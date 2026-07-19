@@ -1,4 +1,4 @@
 # Personal landing page
 
-https://deveugene.de
+https://deveugene.dev
 
